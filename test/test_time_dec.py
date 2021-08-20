@@ -19,14 +19,14 @@ class MyTestCase(unittest.TestCase):
 
     def test_time_ns(self):
         @time_ns(3)
-        def test():
+        def test(name, id_):
             a = []
             for i in range(7000):
                 a.append(random.randint(0, 9))
 
         n = 100
         a = []
-        test()
+        test(1, no_copy=1)
 
 
 if __name__ == '__main__':
